@@ -31,6 +31,62 @@ class UkValidationTest extends CakeTestCase {
  * @return void
  */
 	public function testPhone() {
+		$this->assertTrue(UkValidation::phone('0169773888'));
+		$this->assertTrue(UkValidation::phone('01768755555'));
+		$this->assertTrue(UkValidation::phone('0175062555'));
+		$this->assertTrue(UkValidation::phone('01884777888'));
+		$this->assertTrue(UkValidation::phone('01165557788'));
+		$this->assertTrue(UkValidation::phone('01917778899'));
+		$this->assertTrue(UkValidation::phone('02035557788'));
+		$this->assertTrue(UkValidation::phone('02475558899'));
+		$this->assertTrue(UkValidation::phone('07555777888'));
+
+		$this->assertTrue(UkValidation::phone('03005558899'));
+		$this->assertTrue(UkValidation::phone('03335558899'));
+		$this->assertTrue(UkValidation::phone('03455558899'));
+		$this->assertTrue(UkValidation::phone('03705558899'));
+		$this->assertTrue(UkValidation::phone('0500777888'));
+		$this->assertTrue(UkValidation::phone('05575558899'));
+		$this->assertTrue(UkValidation::phone('05675558899'));
+		$this->assertTrue(UkValidation::phone('07075558899'));
+		$this->assertTrue(UkValidation::phone('07675558899'));
+		$this->assertTrue(UkValidation::phone('0800777888'));
+		$this->assertTrue(UkValidation::phone('08005558899'));
+		$this->assertTrue(UkValidation::phone('08085558899'));
+		$this->assertTrue(UkValidation::phone('08445558899'));
+		$this->assertTrue(UkValidation::phone('08715558899'));
+		$this->assertTrue(UkValidation::phone('09035558899'));
+		$this->assertTrue(UkValidation::phone('09115558899'));
+		$this->assertTrue(UkValidation::phone('09825558899'));
+
+		$this->assertTrue(UkValidation::phone('+44169773888'));
+		$this->assertTrue(UkValidation::phone('+441768755555'));
+		$this->assertTrue(UkValidation::phone('+44175062555'));
+		$this->assertTrue(UkValidation::phone('+441884777888'));
+		$this->assertTrue(UkValidation::phone('+441165557788'));
+		$this->assertTrue(UkValidation::phone('+441917778899'));
+		$this->assertTrue(UkValidation::phone('+442035557788'));
+		$this->assertTrue(UkValidation::phone('+442475558899'));
+		$this->assertTrue(UkValidation::phone('+447555777888'));
+
+		$this->assertTrue(UkValidation::phone('+443005558899'));
+		$this->assertTrue(UkValidation::phone('+443335558899'));
+		$this->assertTrue(UkValidation::phone('+443455558899'));
+		$this->assertTrue(UkValidation::phone('+443705558899'));
+		$this->assertTrue(UkValidation::phone('+44500777888'));
+		$this->assertTrue(UkValidation::phone('+445575558899'));
+		$this->assertTrue(UkValidation::phone('+445675558899'));
+		$this->assertTrue(UkValidation::phone('+447075558899'));
+		$this->assertTrue(UkValidation::phone('+447675558899'));
+		$this->assertTrue(UkValidation::phone('+44800777888'));
+		$this->assertTrue(UkValidation::phone('+448005558899'));
+		$this->assertTrue(UkValidation::phone('+448085558899'));
+		$this->assertTrue(UkValidation::phone('+448445558899'));
+		$this->assertTrue(UkValidation::phone('+448715558899'));
+		$this->assertTrue(UkValidation::phone('+449035558899'));
+		$this->assertTrue(UkValidation::phone('+449115558899'));
+		$this->assertTrue(UkValidation::phone('+449825558899'));
+
 		$this->assertTrue(UkValidation::phone('016977 3888'));
 		$this->assertTrue(UkValidation::phone('017687 55555'));
 		$this->assertTrue(UkValidation::phone('01750 62555'));
@@ -160,3 +216,4 @@ class UkValidationTest extends CakeTestCase {
 		$this->assertFalse(UkValidation::postal('DT4-8PP'));
 	}
 }
+
